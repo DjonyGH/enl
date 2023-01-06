@@ -1,0 +1,15 @@
+.widget-donutchart {
+  .widget-donutchart__donutchart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .widget-donutchart__title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.25em;
+    font-weight: 600;
+    padding: 0 16px;
+  }
+}

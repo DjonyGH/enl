@@ -1,0 +1,22 @@
+.content{
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - 68px);
+
+  .isRelevant {
+    label {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+  .sort {
+    min-width: 300px;
+    label {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

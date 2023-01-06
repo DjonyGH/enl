@@ -1,0 +1,27 @@
+main {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include media-breakpoint-up(xl) {
+    overflow: hidden;
+  }
+
+  scrollbar-color: $scroll-color-thumb $scroll-color-track;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: $scroll-color-track;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $scroll-color-thumb;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $scroll-color-thumb;
+  }
+}

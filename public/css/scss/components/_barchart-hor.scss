@@ -1,0 +1,124 @@
+.barchart-hor {
+  position: relative;
+  padding-bottom: 28px;
+
+  --titlewidth: 52px;
+
+
+  .barchart-hor__grids {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: calc(var(--titlewidth) + 8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .barchart-hor__grid {
+    display: grid;
+    grid-auto-rows: 1fr auto;
+    justify-items: center;
+  }
+
+  .barchart-hor__grid-line {
+    width: 1px;
+    border-left: 1px dashed $c-base-200;
+  }
+
+  .barchart-hor__grid-value {
+    color: $c-base-600;
+    font-size: 12px;
+    line-height: 1em;
+    margin-top: 8px;
+  }
+
+
+  .barchart-hor__unit {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .barchart-hor__unit + .barchart-hor__unit {
+    margin-top: 16px;
+  }
+
+  .barchart-hor__unit-title {
+    width: var(--titlewidth);
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 1em;
+    border: 1px solid $c-base-200;
+    border-radius: 4px;
+    padding: 4px 7px;
+
+    &.barchart-hor__unit-title_active {
+      background: $c-base-800;
+      border-color: $c-base-800;
+      color: $c-white;
+    }
+  }
+
+  .barchart-hor__unit-bars {
+    width: calc(100% - var(--titlewidth) - 8px);
+    display: flex;
+  }
+
+  .barchart-hor__bar {
+    height: 24px;
+    position: relative;
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 6px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 1.38%, rgba(0, 0, 0, 0) 99.95%);
+      mix-blend-mode: darken;
+      opacity: 0.75;
+    }
+  }
+
+  .barchart-hor__value {
+    position: absolute;
+    z-index: 2;
+    bottom: 16px;
+
+    background: $c-white;
+    border-radius: 4px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(24, 25, 27, 0.12);
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid $c-white;
+
+      position: absolute;
+      bottom: -5px;
+      left: calc(50% - 4px);
+    }
+  }
+
+
+  .barchart-hor__digit {
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1em;
+  }
+
+}

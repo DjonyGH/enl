@@ -1,0 +1,108 @@
+.template-common {
+  height: 100%;
+
+  --widthmin: 72px;
+  --widthmax: 384px;
+
+  .template-common__container {
+    height: 100%;
+    padding: 16px 0 16px 16px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .template-common__aside {
+    background: $c-base-800;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: var(--widthmin);
+    @include transition_1;
+    transition-property: width;
+
+    &:before {
+      content: '';
+      display: block;
+      width: var(--widthmin);
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      top: 0;
+      background: $c-primary-800;
+    }
+  }
+
+  .template-common__aside-container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+  }
+
+  .aside-param {
+    width: var(--widthmax);
+    display: flex;
+    align-items: stretch;
+  }
+
+  .aside-param-min {
+    background: $c-primary-800;
+    padding: 8px;
+    width: var(--widthmin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aside-param-max {
+    width: calc(var(--widthmax) - var(--widthmin));
+    padding: 8px;
+    text-align: left;
+  }
+
+  .template-common__aside.template-common__aside_max {
+    width: var(--widthmax);
+  }
+
+  .template-common__main {
+    width: calc(100% - var(--widthmin));
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    @include transition_1;
+    transition-property: width;
+
+    &.template-common__main_max {
+      width: calc(100% - var(--widthmax));
+    }
+  }
+
+  .template-common__title {
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding-top: 16px;
+    padding-right: 80px;
+
+    @include media-breakpoint-up(h) {
+      font-size: 2em;
+    }
+  }
+
+  .template-common__subtitle {
+    font-size: 16px;
+    color: $c-base-500;
+    font-weight: 400;
+  }
+
+  &.template-common_max {
+    .template-common__aside {
+      display: none;
+    }
+
+    .template-common__main {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.accordion {
+  background: $c-white;
+  padding: 16px;
+  min-height: 100%;
+
+  .accordion__item + .accordion__item {
+    margin-top: 16px;
+  }
+
+  .accordion__item {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .accordion__item-header {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 16px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    background: $c-primary-100;
+  }
+
+  .accordion__item-trigger {
+    position: relative;
+    padding: 16px 72px 16px 24px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24'%3e%3cg fill='%23494B50' stroke='%23494B50' fill-rule='evenodd' clip-rule='evenodd'%3e%3cpath d='M11.71 9.454a.41.41 0 01.58 0l4.923 4.922a.41.41 0 01-.581.581L12 10.324l-4.632 4.633a.41.41 0 01-.581-.58l4.922-4.923z'/%3e%3c/g%3e%3c/svg%3e ");
+      transform: scaleY(-1);
+
+      @include transition_1;
+      transition-property: transform;
+
+      position: absolute;
+      right: 16px;
+      top: 16px;
+    }
+  }
+
+  .accordion__item-body {
+    background: $c-white;
+    border: 1px solid transparent;
+    border-top: 0 !important;
+    border-radius: 0 0 8px 8px;
+    padding: 0 24px;
+    height: 0;
+    opacity: 0;
+
+    @include transition_1;
+    transition-property: padding, height, opacity, border;
+  }
+
+  .accordion__item-title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .accordion__item.accordion__item_show {
+    .accordion__item-trigger {
+      &:after {
+        transform: scaleY(1);
+      }
+    }
+
+    .accordion__item-body {
+      padding: 24px;
+      height: auto;
+      opacity: 1;
+      overflow: hidden;
+      border: 1px solid $c-primary-200;
+    }
+  }
+
+
+}

@@ -1,0 +1,24 @@
+.okved {
+  font-weight: 400;
+  .okved__code {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 4px;
+    padding: 0 6px;
+    background: $c-primary-100;
+  }
+
+  .okved__name {
+    padding-top: 0.25em;
+  }
+
+  &.okved__inline {
+    display: flex;
+    align-items: flex-start;
+
+    .okved__code {
+      margin-right: 12px;
+    }
+  }
+}

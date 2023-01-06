@@ -1,0 +1,21 @@
+.content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - 68px);
+}
+.content .isRelevant label {
+  font-weight: 400;
+  font-size: 14px;
+}
+.content .sort {
+  min-width: 300px;
+}
+.content .sort label {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=UploadedReportList.module.css.map */

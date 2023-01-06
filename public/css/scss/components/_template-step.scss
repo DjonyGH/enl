@@ -1,0 +1,174 @@
+.template-step {
+  width: 100%;
+  height: 100%;
+
+  --relustwidth: 360px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  padding-right: 16px;
+
+  .template-step__container {
+    width: calc(100% - 80px - 16px - 16px);
+    margin: 0 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-color: $scroll-color-thumb $scroll-color-track;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      background-color: $scroll-color-track;
+    }
+
+    /* ползунок скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background-color: $scroll-color-thumb;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: $scroll-color-thumb;
+    }
+  }
+
+  .template-step__aside {
+    width: 80px;
+    background: $c-white;
+  }
+
+  .template-step__container-wrapper {
+    min-width: 1350px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .template-step__step-content {
+    width: calc(100% - var(--widthmax));
+    height: 100%;
+    padding: 0 16px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    visibility: hidden;
+
+    * {
+      visibility: visible;
+    }
+
+    &:hover {
+      visibility: visible;
+    }
+
+    scrollbar-color: $scroll-color-thumb $scroll-color-track;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: $scroll-color-track;
+    }
+
+    /* ползунок скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background-color: $scroll-color-thumb;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: $scroll-color-thumb;
+    }
+  }
+
+  .template-step__step-aside {
+    width: var(--widthmax);
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 8px;
+
+    visibility: hidden;
+
+    * {
+      visibility: visible;
+    }
+
+    &:hover {
+      visibility: visible;
+    }
+
+    scrollbar-color: $scroll-color-thumb $scroll-color-track;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: $scroll-color-track;
+    }
+
+    /* ползунок скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background-color: $scroll-color-thumb;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: $scroll-color-thumb;
+    }
+  }
+
+  .template-step__title {
+    font-size: 1.15em;
+    line-height: 1.25em;
+    font-weight: 600;
+
+    @include media-breakpoint-up(h) {
+      font-size: 1.44em;
+    }
+  }
+
+  .template-step__table-block {
+    background: $c-white;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+
+  &.template-step_max {
+    padding-right: 0;
+
+    .template-step__info {
+      display: none;
+    }
+
+    .template-common__title {
+      margin-bottom: -16px;
+    }
+
+    .template-step__aside {
+      display: none;
+    }
+
+    .template-step__container {
+      width: 100%;
+      margin: 0;
+    }
+
+    .template-step__step-aside {
+      display: none;
+    }
+
+    .template-step__step-content {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+

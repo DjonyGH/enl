@@ -1,0 +1,40 @@
+.btn-switcher {
+  display: flex;
+
+  .btn-switcher__item {
+    font-size: 14px;
+    line-height: 30px;
+    height: 32px;
+    color: $text-color;
+    background-color: $c-white;
+    @include transition_1;
+    transition-property: background-color, background-image, color, border-color;
+    border-radius: 0;
+    border: 1px solid $c-base-200;
+
+
+    &:first-child {
+      border-radius: $corner-radius 0 0 $corner-radius;
+      border-right: none;
+    }
+
+    &:last-child {
+      border-radius: 0 $corner-radius $corner-radius 0;
+      border-left: none;
+    }
+
+    &:hover {
+      color: $primarycolor;
+    }
+
+    &.btn-switcher__item_active {
+      border-radius: $corner-radius;
+      cursor: default;
+      /*pointer-events: none;*/
+      color: $c-white;
+      background-color: $c-base-700;
+      border-color: $c-base-700;
+    }
+  }
+}
+

@@ -1,0 +1,125 @@
+{
+  "name": "sfoenl",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/charts": "1.3.6",
+    "@ant-design/icons": "4.6.0",
+    "@babel/core": "7.0.0",
+    "@ff/ui-kit": "^1.14.0",
+    "@ff/web-map": "^1.9.1",
+    "@popperjs/core": "^2.10.2",
+    "@sideway/address": "^4.1.3",
+    "antd": "^4.16.13",
+    "axios": "^0.21.0",
+    "bootstrap": "^5.1.3",
+    "chart.js": "^3.6.0",
+    "classnames": "^2.3.1",
+    "crypto-js": "^4.1.1",
+    "docx-templates": "^4.9.2",
+    "file-saver": "^2.0.5",
+    "generate-password": "^1.7.0",
+    "html-to-image": "^1.9.0",
+    "lodash": "^4.17.20",
+    "luxon": "^3.0.4",
+    "mobx": "^6.0.4",
+    "mobx-react": "^7.0.5",
+    "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
+    "react-bootstrap": "^2.2.1",
+    "react-chartjs-2": "^3.3.0",
+    "react-confirm-alert": "2.8.0",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.14.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^5.2.1",
+    "reflect-metadata": "0.1.13",
+    "sheetjs-style": "^0.15.8",
+    "source-map-explorer": "^2.5.2"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build\\static\\js\\*.js'",
+    "start": "node src/b64.js && react-scripts start",
+    "build": "node src/b64.js && react-scripts build",
+    "build:ais3": "dotenv -e .env.ais3 react-scripts build",
+    "build:kpe": "dotenv -e .env.kpe react-scripts build",
+    "build:adp": "dotenv -e .env.adp react-scripts build",
+    "clean:ais3": "del-cli --force .\\build\\ais3\\EnlMicroBuild\\ServerIS\\RoleCatalog\\Abs4.0\\SfoEnl\\SfoEnlWebSite\\fonts\\ && del-cli --force  .\\build\\ais3\\EnlMicroBuild\\ServerIS\\RoleCatalog\\Abs4.0\\SfoEnl\\SfoEnlWebSite\\mocks\\",
+    "clean:kpe": "del-cli --force .\\build\\kpe\\build_frontend\\fonts\\ && del-cli --force .\\build\\kpe\\build_frontend\\mocks\\",
+    "clean:adp": "del-cli --force .\\build\\adp\\build_frontend\\fonts\\ && del-cli --force .\\build\\adp\\build_frontend\\mocks\\",
+    "zip:ais3": "zip-build .\\build\\ais3\\EnlMicroBuild build --template=%NAME%_ServerIs_%VERSION%_%TIMESTAMP%.%EXT%",
+    "zip:kpe": "zip-build .\\build\\kpe build --template=%NAME%_101_%VERSION%_%TIMESTAMP%.%EXT%",
+    "zip:adp": "zip-build .\\build\\adp build --template=%NAME%_Adp_%VERSION%_%TIMESTAMP%.%EXT%",
+    "zip:local": "zip-build .\\build\\local build --template=%NAME%_local_%VERSION%_%TIMESTAMP%.%EXT%",
+    "hotfix:local": "yarn build && yarn zip:local",
+    "hotfix:ais3": "yarn build:ais3 && yarn clean:ais3 && yarn zip:ais3",
+    "hotfix:kpe": "yarn build:kpe && yarn clean:kpe && yarn zip:kpe",
+    "hotfix:adp": "yarn build:adp && yarn clean:adp && yarn zip:adp",
+    "build:all": "yarn build:ais3 && yarn build:kpe && yarn build:adp",
+    "clean:all": "yarn clean:ais3 && yarn clean:kpe && yarn clean:adp",
+    "zip:all": "yarn zip:ais3 && yarn zip:kpe && yarn zip:adp",
+    "hotfix:all": "yarn build:ais3 && yarn clean:ais3 && yarn zip:ais3 && yarn build:kpe && yarn clean:kpe && yarn zip:kpe && yarn build:adp && yarn clean:adp && yarn zip:adp",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:ff": "ff-lint",
+    "generate": "ff-generate"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./eslintrc.js"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@ff/generator": "^1.5.2",
+    "@ff/linting": "^1.6.2",
+    "@testing-library/dom": ">=7.21.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/file-saver": "^2.0.5",
+    "@types/jest": "^26.0.15",
+    "@types/lodash": "^4.14.165",
+    "@types/luxon": "^3.0.1",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-modal": "^3.13.1",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/react-test-renderer": "^17.0.0",
+    "del-cli": "^5.0.0",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
+    "react-error-overlay": "6.0.9",
+    "react-test-renderer": "^17.0.1",
+    "sass": "^1.57.1",
+    "typescript": "^4.1.2",
+    "zip-build": "^1.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "yarn lint:ff"
+    ]
+  },
+  "homepage": "."
+}

@@ -1,0 +1,48 @@
+.report-common-info {
+  background: $c-base-10;
+  padding: 24px;
+  border-radius: 8px;
+
+  .report-common-info__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .report-common-info__item-label {
+    flex: 0 0 40%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    color: $c-base-500;
+  }
+
+  .report-common-info__item-text {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .report-common-info__item-divider {
+    border-bottom: 1px dashed $c-base-400;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .report-common-info__item-value {
+    flex: 0 0 60%;
+    font-weight: 600;
+  }
+
+  .report-common-info__item + .report-common-info__item {
+    margin-top: 16px;
+  }
+
+  @include media-breakpoint-up(xh) {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+}

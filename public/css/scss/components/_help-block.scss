@@ -1,0 +1,10 @@
+.help-block {
+  .help-block__title {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.help-block + .help-block {
+  margin-top: 32px;
+}

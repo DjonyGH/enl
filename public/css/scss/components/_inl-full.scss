@@ -1,0 +1,25 @@
+.inl-full {
+  font-weight: 400;
+
+  .inl-full__code {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 4px;
+    padding: 0 6px;
+    background: $c-primary-100;
+  }
+
+  .inl-full__name {
+    padding-top: 0.25em;
+  }
+
+  &.inl-full__inline {
+    display: flex;
+    align-items: flex-start;
+
+    .inl-full__code {
+      margin-right: 12px;
+    }
+  }
+}

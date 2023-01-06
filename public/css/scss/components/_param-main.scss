@@ -1,0 +1,18 @@
+.param-main {
+  background: $c-primary-100;
+  border-radius: 8px;
+  padding: 16px;
+
+  .param-main__value {
+    font-size: 24px;
+    line-height: 1em;
+  }
+
+  .param-main__label {
+    margin-top: 8px;
+  }
+
+  .param-main__units {
+    font-size: 18px;
+  }
+}

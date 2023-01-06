@@ -1,0 +1,258 @@
+.form-control {
+  width: 100%;
+  border: 1px solid $c-base-200;
+  background: $c-white;
+  font-family: $text-font;
+  font-size: 16px;
+  font-weight: $text-width;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 12px;
+  color: $text-color;
+  position: relative;
+  border-radius: $corner-radius;
+  @include transition_1;
+  transition-property: border-color;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &:focus {
+    border-color:$c-primary-600;
+    z-index: 1;
+  }
+
+  &:disabled {
+     cursor: not-allowed;
+    background: $c-base-100;
+    color: $c-base-500;
+  }
+
+  &:focus::-webkit-input-placeholder {color: transparent}
+  &:focus::-moz-placeholder          {color: transparent}
+  &:focus:-moz-placeholder           {color: transparent}
+  &:focus:-ms-input-placeholder      {color: transparent}
+
+  &.form-control_small {
+    font-size: 14px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0 8px;
+  }
+
+  &.form-control_large {
+    line-height: 48px;
+    height: 48px;
+  }
+
+  &.form-control_on {
+    border-color: $c-green-700;
+    color: $c-green-700;
+  }
+
+  &.form-control_off {
+    border-color: $c-base-400;
+    color: $c-base-400;
+  }
+
+  &.form-control_noradius {
+    border-radius: 0;
+  }
+
+  &.form-control_date {
+    width: 12rem;
+    padding-right: 40px !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24'%3e%3cg fill='%2394979E' fill-rule='evenodd' clip-rule='evenodd'%3e%3cpath d='M7 3V4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H17V3H16V4H8V3H7ZM6 6H7V7H8V6H16V7H17V6H18V8H6V6ZM6 10H18V18H6V10Z' /%3e%3cpath d='M8 12H9V13.001H8V12Z' /%3e%3cpath d='M14 14H15V15.001H14V14Z' /%3e%3cpath d='M10 12H16V13.001H10V12Z' /%3e%3cpath d='M8 14H13V15.001H8V14Z' /%3e%3c/g%3e%3c/svg%3e ");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+
+    &::-webkit-calendar-picker-indicator {
+      background:none;
+      cursor: pointer;
+    }
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select.form-control {
+  width: auto;
+  max-width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 40px !important;
+  background: $c-white url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24'%3e%3cg fill='%2318191B' fill-rule='evenodd' clip-rule='evenodd'%3e%3cpath d='M12 15l4-5H8l4 5z'/%3e%3c/g%3e%3c/svg%3e ") no-repeat right 8px center / 24px;
+  cursor: pointer;
+
+  &.form-control_small {
+    padding-right: 32px !important;
+    background-position: right 4px center;
+  }
+}
+
+label {
+  margin: 0;
+}
+
+textarea.form-control {
+  padding: 1rem;
+  height: auto;
+  line-height: 1.35rem;
+
+  scrollbar-color: $scroll-color-thumb $scroll-color-track;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: $scroll-color-track;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $scroll-color-thumb;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $scroll-color-thumb;
+  }
+}
+
+.form-group {
+  position: relative;
+
+  .form-group__label {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 600;
+  }
+
+  .form-group__wrapper {
+    margin-top: 8px;
+  }
+
+  .form-group__group {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.form-group_inline {
+    display: flex;
+    align-items: center;
+
+    .form-group__label {
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+
+    .form-group__wrapper {
+      margin-top: 0;
+    }
+
+    .form-control {
+      margin-top: 0;
+    }
+  }
+}
+
+.form-check {
+  position: relative;
+
+  input[type=checkbox],
+  input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    padding: 0 0 0 32px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    line-height: 1.2em;
+  }
+
+  input[type=checkbox] + label:before,
+  input[type=radio] + label:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    background: $white;
+    border: 1px solid $c-base-300;
+    border-radius: 2px;
+  }
+
+  input[type=radio] + label:before {
+    border-radius: 50%;
+  }
+
+  input[type=checkbox] + label:after,
+  input[type=radio] + label:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: $c-primary-600;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    opacity: 0;
+    @include transition_1;
+  }
+
+  input[type=radio] + label:after {
+    border-radius: 50%;
+  }
+
+  input[type=checkbox]:checked + label:after,
+  input[type=radio]:checked + label:after {
+    opacity: 1;
+  }
+
+
+  &.form-check_nolabel {
+    width: 24px;
+
+    label {
+      padding: 0;
+      text-indent: -20000px;
+      width: 24px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

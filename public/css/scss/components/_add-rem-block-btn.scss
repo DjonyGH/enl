@@ -1,0 +1,26 @@
+.add-rem-block-btn {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: 16px 0;
+  text-decoration: none;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: $c-base-100;
+  }
+
+  .add-rem-block-btn__link {
+    font-size: 11px;
+    line-height: 16px;
+    padding: 0 8px;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+

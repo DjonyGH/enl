@@ -1,0 +1,131 @@
+[
+    {
+      "id": 1,
+      "reportYear": 2019,
+      "uploadedAt": "2019-10-18T20:43:00",
+      "uploadedBy": "Константинопольский А.К.",
+      "statusId": 0,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 2,
+      "reportYear": 2018,
+      "uploadedAt": "2018-10-17T19:20:00",
+      "uploadedBy": "Иванов С.С.",
+      "statusId": 2,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 3,
+      "reportYear": 2017,
+      "uploadedAt": "2017-10-11T17:00:00",
+      "uploadedBy": "Дятлов К.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 4,
+      "reportYear": 2020,
+      "uploadedAt": "2020-01-08T09:15:00",
+      "uploadedBy": "Корешков М.М.",
+      "statusId": 2,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 5,
+      "reportYear": 2020,
+      "uploadedAt": "2020-02-16T10:20:00",
+      "uploadedBy": "Буслов Е.Е.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 6,
+      "reportYear": 2019,
+      "uploadedAt": "2019-03-20T11:30:00",
+      "uploadedBy": "Миронов М.М.",
+      "statusId": 0,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 7,
+      "reportYear": 2021,
+      "uploadedAt": "2021-09-03T20:43:00",
+      "uploadedBy": "Шуфутинский М.М.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 8,
+      "reportYear": 2022,
+      "uploadedAt": "2022-01-01T00:01:00",
+      "uploadedBy": "Новогодний Д.М.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 9,
+      "reportYear": 2018,
+      "uploadedAt": "2018-12-25T00:01:00",
+      "uploadedBy": "Рождественский А.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 10,
+      "reportYear": 2020,
+      "uploadedAt": "2020-05-10T10:40:00",
+      "uploadedBy": "Константинопольский А.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 11,
+      "reportYear": 2021,
+      "uploadedAt": "2021-08-10T10:35:00",
+      "uploadedBy": "Константинопольский А.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 12,
+      "reportYear": 2019,
+      "uploadedAt": "2019-11-20T15:33:00",
+      "uploadedBy": "Рождественский А.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 13,
+      "reportYear": 2020,
+      "uploadedAt": "2020-07-07T07:07:00",
+      "uploadedBy": "Миронов М.М.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 14,
+      "reportYear": 2021,
+      "uploadedAt": "2021-08-08T08:00:00",
+      "uploadedBy": "Миронов М.М.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 15,
+      "reportYear": 2022,
+      "uploadedAt": "2022-09-30T09:45:00",
+      "uploadedBy": "Дятлов К.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    },
+    {
+      "id": 16,
+      "reportYear": 2021,
+      "uploadedAt": "2021-10-18T20:45:00",
+      "uploadedBy": "Дятлов К.К.",
+      "statusId": 1,
+      "fileUrl": "mocks/zip/2021.ZIP"
+    }
+]
+

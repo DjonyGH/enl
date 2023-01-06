@@ -1,0 +1,18 @@
+.filter-badge {
+  display: flex;
+  align-items: center;
+  background: $c-white;
+  border-radius: $corner-radius;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 16px;
+
+  dt {
+    color: $c-base-500;
+  }
+
+  dd {
+    margin-left: 0.5em;
+  }
+
+}

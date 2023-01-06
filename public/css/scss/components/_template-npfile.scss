@@ -1,0 +1,63 @@
+.template-np {
+
+  @include media-breakpoint-up(h) {
+    font-size: 16px !important;
+  }
+
+  table td {
+    font-size: 14px;
+  }
+
+  .np_inn {
+    color: $c-base-500;
+  }
+
+  .dl-options {
+    dt {
+      text-transform: none;
+      font-weight: 600;
+      color: $text-color;
+    }
+  }
+
+  table {
+    .td-param:after {
+      content: '';
+      display: block;
+      width: 200px;
+    }
+  }
+
+  .template-np__stepblock {
+    border-radius: 8px;
+    padding: 24px;
+    background: $c-base-10;
+
+    .table {
+      th, td {
+        border-color: $c-base-200;
+      }
+
+      &.table_nobrd {
+        tr:first-child td {
+          border-top: 0;
+        }
+
+        tr:last-child td {
+          border-bottom: 0;
+        }
+
+        td:first-child {
+          padding-left: 0;
+        }
+
+        td:last-child {
+          padding-right: 0;
+        }
+
+      }
+    }
+  }
+
+
+}

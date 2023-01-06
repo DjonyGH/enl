@@ -1,0 +1,214 @@
+.barchart-vert {
+  --barsamount: 3;
+  display: flex;
+  flex-direction: column;
+
+  .barchart-vert__body {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .barchart-vert__grids {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+  .barchart-vert__grid {
+    height: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1em;
+
+    .barchart-vert__grid-value {
+      width: 2em;
+      text-align: right;
+      margin-right: 8px;
+      color: $c-base-600;
+      font-size: 12px;
+      line-height: 1em;
+      display: none;
+    }
+
+    .barchart-vert__grid-line {
+      height: 1px;
+      border-top: 1px dashed $c-base-200;
+      /*width: calc(100% - 2em - 8px);*/
+      width: 100%;
+    }
+
+    &:last-child {
+      .barChartVertGridLine {
+        border-top-style: solid;
+      }
+    }
+  }
+
+  .barchart-vert__bars {
+    /*width: calc(100% - 2em - 4px);*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*left: calc(2em + 4px);*/
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .barchart-vert__bar-block {
+    width: calc(100% / var(--barsamount));
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .barchart-vert__bar {
+    border-radius: 4px 4px 0 0;
+    width: 24px;
+    margin: 0 auto;
+    z-index: 1;
+    @include transition_1;
+    transition-property: height;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 55.8%, rgba(0, 0, 0, 0) 99.95%);
+      mix-blend-mode: darken;
+      opacity: 0.75;
+    }
+  }
+
+  .barchart-vert__value {
+    margin-bottom: 16px;
+    background: $c-white;
+    border-radius: 4px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(24, 25, 27, 0.12);
+    position: relative;
+    text-align: center;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid $c-white;
+
+      position: absolute;
+      bottom: -5px;
+      left: calc(50% - 4px);
+    }
+  }
+
+  .barchart-vert__digit {
+    display: block;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1em;
+  }
+
+  .barchart-vert__diff {
+    display: block;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1em;
+    color: $c-base-500;
+    margin-top: 4px;
+  }
+
+  .barchart-vert__legend {
+    font-size: 0.88rem;
+    line-height: 1.2em;
+    text-align: center;
+    /*width: calc(100% - 2em - 4px);*/
+    width: 100%;
+    /*left: calc(2em + 4px);*/
+    padding-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    flex: 0 0 auto;
+
+    .barchart-vert__legend-item {
+      width: calc(100% / var(--barsamount));
+      text-align: center;
+      font-weight: 500;
+      position: relative;
+      color: $c-base-500;
+
+      /*&:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 8px;
+        background: $c-base-400;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      &:first-child {
+        &:before {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 8px;
+          background: $c-base-400;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }*/
+    }
+  }
+
+  &.barchart-vert_blue {
+    .barchart-vert__bar {
+      background: $c-primary-500;
+    }
+  }
+
+  &.barchart-vert_lightblue {
+    .barchart-vert__bar {
+      background: $c-primary-300;
+    }
+  }
+
+  &.barchart-vert_grey {
+    .barchart-vert__bar {
+      background: $c-base-400;
+    }
+  }
+
+  &.barchart-vert_wide {
+    .barchart-vert__bar {
+      width: 50%;
+    }
+  }
+}

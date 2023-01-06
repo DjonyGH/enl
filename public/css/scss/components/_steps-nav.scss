@@ -1,0 +1,60 @@
+.steps-nav {
+  padding: 16px;
+
+  .steps-nav__item {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $c-white;
+    color: $c-primary-600;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid $c-primary-600;
+    border-radius: 4px;
+    @include transition_1;
+    transition-property: background-color, color, border-color;
+
+    &:hover, &.steps-nav__item_active {
+      background-color: $c-base-800;
+      border-color: $c-base-800;
+      color: $c-white;
+    }
+
+    &.steps-nav__item_active {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  .steps-nav__list {
+    padding: 32px 0;
+    .steps-nav__item + .steps-nav__item {
+      margin-top: 16px;
+    }
+  }
+
+  .steps-nav__item-prew,
+  .steps-nav__item-next {
+    text-indent: -20000px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-color: $secondarycolor;
+    border-color: $secondarycolor;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24'%3e%3cg fill='%23494B50' stroke='%23494B50' fill-rule='evenodd' clip-rule='evenodd'%3e%3cpath d='M11.71 9.454a.41.41 0 01.58 0l4.923 4.922a.41.41 0 01-.581.581L12 10.324l-4.632 4.633a.41.41 0 01-.581-.58l4.922-4.923z'/%3e%3c/g%3e%3c/svg%3e ");
+
+    &:hover {
+      background-color: shade($secondarycolor, 3%);
+      border-color: shade($secondarycolor, 3%);
+    }
+  }
+
+  .steps-nav__item-next {
+    transform: rotate(180deg);
+  }
+}
+

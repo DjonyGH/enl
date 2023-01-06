@@ -1,0 +1,24 @@
+.widget-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  min-height: 40px;
+
+  .widget-title__control {
+    width: 40px;
+    @include transition_all;
+
+    &:hover {
+      transform:  scale(1, -1);
+    }
+  }
+
+  .widget-title__name {
+    width: calc(100% - 40px);
+    padding-right: 32px;
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 600;
+  }
+}

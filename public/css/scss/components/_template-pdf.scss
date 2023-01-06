@@ -1,0 +1,307 @@
+.template-pdf {
+  background: $c-white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+
+  .screen-wrapper {
+    width: 698px;
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  .template-common__title {
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1.3em;
+  }
+
+  .date-calc dl {
+    padding-left: 0;
+    dt, dd {
+      display: inline;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .dot-list .dot-list__item::after {
+    display: none;
+  }
+
+  .calc-param {
+    &.calc-param_scenario dt {
+      display: none;
+    }
+
+    dd {
+      font-weight: 700;
+    }
+  }
+
+  .report-common-info {
+    background: 0;
+    padding: 0;
+
+    .report-common-info__item-label {
+      flex: 0 0 30%;
+      display: block;
+      padding-right: 8px;
+    }
+
+
+    .report-common-info__item-value {
+      flex: 0 0 70%;
+    }
+
+    .report-common-info__item-divider {
+      display: none;
+    }
+  }
+
+  /*.report-common-info {
+    padding: 0;
+    background: 0;
+
+    .report-common-info__item {
+      display: block;
+
+      dt, dd {
+        display: block;
+      }
+
+      dd {
+        margin-top: 4px;
+      }
+    }
+
+    .report-common-info__item-divider {
+      display: none;
+    }
+  }*/
+
+  .status-itog {
+    .status-itog__container {
+      padding: 0;
+      background: 0 !important;
+      border:0 !important;
+    }
+
+    .status-itog__notice {
+      margin-top: 2px;
+      font-size: 8px;
+    }
+
+    &.status-itog_inline {
+      .status-itog__container {
+        display: flex;
+        align-items: center;
+      }
+
+      .status-itog__notice {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .barchart-vert .barchart-vert__bar::after,
+  .barchart-hor .barchart-hor__bar::after {
+    display: none;
+  }
+
+
+  &.template-pdf_landscape {
+    font-size: 10px;
+    line-height: 1.25em;
+
+    .screen-wrapper {
+      width: 1048px;
+    }
+
+    .template-common__title {
+      font-size: 18px;
+    }
+
+    h5 {
+      font-size: 16px;
+    }
+
+
+    .status-itog {
+      .status-itog__text,
+      .status-itog__notice {
+        font-size: 10px;
+        line-height: 1.25em;
+      }
+
+      &.status-itog_report {
+        .status-itog__text {
+          padding: 8px 16px;
+        }
+      }
+    }
+
+    .report-common-info {
+      font-size: 10px;
+      line-height: 1.25em;
+      .report-common-info__item + .report-common-info__item {
+        margin-top: 8px;
+      }
+    }
+
+    .legend {
+      .legend__item-label-value {
+        max-width: 85%;
+        font-size: 10px;
+      }
+
+      .legend__item-label-notice {
+        font-size: 10px;
+        line-height: 1.25em;
+      }
+    }
+
+    .widget-block {
+      border: 0;
+      padding: 0;
+
+      &.widget-block_heightfix {
+      }
+
+      .widget-block__title {
+        font-size: 14px;
+      }
+
+      .widget-block__body {
+        margin-top: 8px;
+      }
+
+      .widget-block__subtitle {
+        font-size: 10px;
+        line-height: 1.25em;
+        margin-top: 4px !important;
+      }
+    }
+
+    .barchart-hor {
+      --titlewidth: 38px;
+      padding-bottom: 20px;
+
+      .barchart-hor__unit-title {
+        font-size: 10px;
+        padding: 2px 6px;
+      }
+
+      .barchart-hor__unit + .barchart-hor__unit {
+        margin-top: 4px;
+      }
+
+      .barchart-hor__bar {
+        height: 12px;
+      }
+
+      .barchart-hor__grid-value {
+        font-size: 8px;
+        line-height: 1em;
+      }
+
+    }
+
+    .param-main {
+      padding: 12px 16px;
+      .param-main__value {
+        font-size: 16px;
+      }
+    }
+
+    .comments {
+      font-size: 0.8em;
+
+      p {
+        margin-top: 0.5em
+      }
+
+      &.comments_column2 {
+        column-width: auto;
+        column-count: 2;
+        column-gap: 32px;
+
+        p {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    }
+
+    .legend-bar {
+      .okved__inline {
+
+        .okved__code {
+          padding: 0;
+          background: 0;
+          margin-right: 8px;
+          font-weight: 700;
+          line-height: 1.25em;
+        }
+
+        .okved__name {
+          font-size: 10px;
+          line-height: 1.25em;
+          padding-top: 0;
+        }
+      }
+    }
+
+    .widget-donutchart {
+      width: 120px;
+
+      .widget-donutchart__title {
+        font-size: 11px;
+      }
+    }
+
+
+    .table {
+      td {
+        padding: 4px 8px;
+        font-size: 10px;
+        line-height: 1.25em;
+      }
+
+      th {
+        padding: 4px 8px;
+        font-size: 10px;
+        line-height: 1.25em;
+      }
+    }
+
+
+
+
+  }
+
+
+  @media print {
+    .widget-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .pagebreak
+    {
+      page-break-before: always;
+    }
+  }
+
+  .print-hidden {
+    @media print {
+      display: none;
+    }
+  }
+}
+
+

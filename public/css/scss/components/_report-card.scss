@@ -1,0 +1,63 @@
+.report-card {
+  border: 1px solid $c-base-200;
+  background: $c-white;
+  border-radius: $corner-radius_2;
+  margin-top: 8px;
+  overflow: hidden;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .report-card__main-block {
+    padding: 24px 0 24px 24px;
+  }
+
+  .report-card__author {
+    color: $c-base-500;
+    display: none;
+  }
+
+  .report-card__object {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2em;
+  }
+
+  .report-card__inn {
+    color: $c-base-500;
+  }
+
+  .report-card__bottom-block {
+    padding: 16px 24px;
+    background: $c-base-10;
+  }
+
+  .report-card__control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .report-card__conrol {
+    display: block;
+    background-color: $c-base-10;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e%3cpath fill='%2361646B' fill-rule='evenodd' d='M9.136 5.811a.461.461 0 01.653 0l5.538 5.538a.463.463 0 010 .654L9.789 17.54a.462.462 0 11-.653-.653l5.212-5.211-5.212-5.211a.461.461 0 010-.654z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 24px;
+    background-size: 24px;
+    width: 40px;
+    overflow: hidden;
+    text-indent: -200000px;
+  }
+
+
+  &.report-card_shared {
+    .report-card__author {
+      display: block;
+    }
+  }
+
+}
+

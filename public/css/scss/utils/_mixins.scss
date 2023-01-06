@@ -1,0 +1,145 @@
+@mixin respond-to($media) {
+
+  @if $media == small {
+    @media only screen and (min-width: 576px) { @content; }
+  }
+
+  @else if $media == medium {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+
+  @else if $media == large {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+
+  @else if $media == xlarge {
+    @media only screen and (min-width: 1248px) { @content; }
+  }
+
+  @else if $media == xxlarge {
+    @media only screen and (min-width: 1360px) { @content; }
+  }
+
+  @else if $media == huge {
+    @media only screen and (min-width: 1648px) { @content; }
+  }
+
+  @else if $media == shuge {
+    @media only screen and (min-width: 1940px) { @content; }
+  }
+
+  @else if $media == gross {
+    @media only screen and (min-width: 2248px) { @content; }
+  }
+}
+
+@mixin fulltextnull {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -1px;
+  word-spacing: -1px;
+}
+
+@mixin fulltextnormal {
+  font-size: $text-size_mobile;
+  line-height: $text-lineheight_mobile;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-weight: 400;
+
+
+  @include media-breakpoint-up(lg) {
+    font-size: $text-size_ipad;
+    line-height: $text-lineheight_ipad;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $text-size_desctop;
+    line-height: $text-lineheight_desctop;
+  }
+
+  @include media-breakpoint-up(h) {
+    font-size: $text-size_hdesctop;
+    line-height: $text-lineheight_hdesctop;
+  }
+
+  @include media-breakpoint-up(xh) {
+    font-size: $text-size_xhdesctop;
+    line-height: $text-lineheight_xhdesctop;
+  }
+
+  @include media-breakpoint-up(sh) {
+    font-size: $text-size_shdesctop;
+    line-height: $text-lineheight_shdesctop;
+  }
+}
+
+@mixin basefontsize {
+  font-size: $text-size_mobile;
+  font-weight: $text-width;
+
+
+  @include media-breakpoint-up(lg) {
+    font-size: $text-size_ipad;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $text-size_desctop;
+   }
+
+  @include media-breakpoint-up(h) {
+    font-size: $text-size_hdesctop;
+  }
+
+  @include media-breakpoint-up(xh) {
+    font-size: $text-size_xhdesctop;
+  }
+
+  @include media-breakpoint-up(sh) {
+    font-size: $text-size_shdesctop;
+  }
+}
+
+@mixin btnIco {
+  overflow: hidden;
+  text-indent: -20000px;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 16px;
+  background-size: 16px;
+  @include fulltextnull;
+  border: 0;
+  text-decoration: none !important;
+  outline: none !important;
+  width: 40px;
+  height: 40px;
+}
+
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+    width: 100%;
+  }
+}
+
+@mixin transition_1 {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0s;
+}
+
+
+@mixin transition_all {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0s;
+}
+

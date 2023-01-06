@@ -1,0 +1,41 @@
+///Основной шрифт для текста
+$text-font: $font_roboto;
+$text-color: $c-base-800;
+$text-width: 400;
+
+$text-size_mobile: 14px;
+$text-lineheight_mobile: 1.25em;
+
+$text-size_ipad: 14px;
+$text-lineheight_ipad: 1.25em;
+
+$text-size_desctop: 14px;
+$text-lineheight_desctop: 1.25em;
+
+$text-size_hdesctop: 14px;
+$text-lineheight_hdesctop: 1.25em;
+
+$text-size_xhdesctop: 14px;
+$text-lineheight_xhdesctop: 1.25em;
+
+$text-size_shdesctop: 14px;
+$text-lineheight_shdesctop: 1.25em;
+
+///Общий фон
+$page-bg-color: $c-base-100;
+$primarycolor: $c-primary-600;
+$secondarycolor: $c-base-100;
+
+///Цвет текстовых ссылок
+$links_color: $c-primary-600;
+$links_color_hover: $c-primary-700;
+$links_color_active: $c-primary-800;
+$links_color_visited: $c-primary-600;
+
+
+//Scroll
+$scroll-color-track: transparent;
+$scroll-color-thumb: $c-base-300;
+
+$corner-radius: 4px;
+$corner-radius_2: 8px;

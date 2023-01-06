@@ -1,0 +1,129 @@
+.widget-barchart {
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  --avasize: 48px;
+
+  .widget-barchart__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .widget-barchart__name {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+
+  .widget-barchart__name-code {
+    margin-right: 12px;
+  }
+
+  .widget-barchart__owners {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .widget-barchart__owner-photo {
+    width: var(--avasize);
+    height: var(--avasize);
+    margin-left: -8px;
+    border: 1px solid $c-white;
+  }
+
+  .widget-barchart__body {
+    margin-top: 8px;
+  }
+
+  .widget-barchart__param-percent {
+    font-size: 1.75rem;
+    line-height: 1em;
+    font-weight: 700;
+  }
+
+  .widget-barchart__bar {
+    margin-top: 8px;
+    height: 4px;
+    position: relative;
+    background: $c-base-100;
+    border-radius: $corner-radius;
+  }
+
+  .widget-barchart__bar-value {
+    display: block;
+    height: 6px;
+    position: absolute;
+    top: -1px;
+    border-radius: $corner-radius;
+  }
+
+  .widget-barchart__docs-value {
+    font-size: 1.125rem;
+    line-height: 1em;
+    margin-top: 12px;
+    padding-left: 24px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16'%3e%3cg fill='%23797D86' fill-rule='evenodd' clip-rule='evenodd'%3e%3cpath d='M3 0h10a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2v-1h1v1a1 1 0 001 1h10a1 1 0 001-1V2a1 1 0 00-1-1H3a1 1 0 00-1 1v1H1V2a2 2 0 012-2z'/%3e%3cpath d='M1 5v-.5a.5.5 0 011 0V5h.5a.5.5 0 010 1h-2a.5.5 0 010-1H1zM1 8v-.5a.5.5 0 011 0V8h.5a.5.5 0 010 1h-2a.5.5 0 010-1H1zM1 11v-.5a.5.5 0 011 0v.5h.5a.5.5 0 010 1h-2a.5.5 0 010-1H1z'/%3e%3cpath d='M5 10.5a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5zM5 8.5a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5zM5 6.5a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5zM5 4.5a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5z' /%3e%3c/g%3e%3c/svg%3e ");
+    }
+  }
+
+  .widget-barchart__param-value {
+    font-weight: 600;
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    .widget-barchart__title {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .widget-barchart__owners {
+      margin-top: 0;
+      margin-left: 32px;
+      height: 1rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .widget-barchart__title {
+      flex-direction: column;
+    }
+
+    .widget-barchart__owners {
+      margin-top: 8px;
+      margin-left: 0;
+      height: auto;
+    }
+  }
+
+  @include media-breakpoint-up(h) {
+
+    .widget-barchart__title {
+      flex-direction: row;
+    }
+
+    .widget-barchart__owners {
+      margin-top: 0;
+      margin-left: 32px;
+      height: 1rem;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.donutchart {
+  .donutchart__donutchart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+
+    background: $c-base-10;
+    border-radius: 50%;
+  }
+
+  .donutchart__legend {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .donutchart__legend-item {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .donutchart__legend-item-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .donutchart__legend-item-sight {
+    margin-right: 8px;
+
+    ins {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .donutchart__legend-item-name {
+    font-size: 16px;
+  }
+
+  .donutchart__legend-item-value {
+    display: block;
+    margin-top: 12px;
+
+    .donutchart__legend-item-digit {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 1em;
+      font-weight: 600;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0.1em;
+        left: -24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &.donutchart__legend-item-digit_up,
+      &.donutchart__legend-item-digit_down {
+        &:before {
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3e%3cg fill='%230057FF'%3e%3cpath d='M7.5 5.414V13a1 1 0 102 0V5.414L12.086 8A1 1 0 1013.5 6.586l-5-5-5 5A1 1 0 104.914 8L7.5 5.414z'/%3e%3c/g%3e%3c/svg%3e");
+        }
+      }
+
+      &.donutchart__legend-item-digit_down {
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .donutchart__legend-item-diff {
+      display: block;
+      font-size: 14px;
+      line-height: 1em;
+      color: $c-base-500;
+      margin-top: 8px;
+    }
+  }
+}

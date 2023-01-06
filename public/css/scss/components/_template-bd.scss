@@ -1,0 +1,25 @@
+.template-bd {
+  height: 100%;
+  display: grid;
+  grid-auto-rows: auto 1fr;
+
+
+  .template-bd__title {
+    font-size: 1.15em;
+    line-height: 1.25em;
+    font-weight: 600;
+
+    @include media-breakpoint-up(h) {
+      font-size: 1.44em;
+    }
+  }
+
+  .template-bd__content-block {
+    background: $c-white;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    grid-auto-rows: auto 1fr;
+
+  }
+}

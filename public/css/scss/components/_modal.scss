@@ -1,0 +1,104 @@
+.modal {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(227,17,30, 0.5);
+  display: flex;
+  flex-direction: column;
+
+  .modal__dialog {
+    width: auto;
+    max-width: 780px;
+    margin: auto;
+    pointer-events: none;
+    padding: 16px;
+  }
+
+  .modal__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: $c-white;
+    background-clip: padding-box;
+    border-radius: $corner-radius;
+    outline: 0;
+  }
+
+  .modal__header {
+    padding: 1.5rem 2rem 0.5rem;
+    /*border-bottom: 1px solid $c-base-200;*/
+    position: relative;
+  }
+
+  .modal__title {
+    padding-right: 80px;
+  }
+
+  .modal__trigger {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+
+  .modal__body {
+    padding: 1.5rem 2rem;
+  }
+
+  .modal__footer {
+    padding: 1rem 2rem;
+    border-top: 1px solid $c-base-100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .btn + .btn {
+     margin-left: 8px;
+    }
+  }
+
+  &.modal_wide {
+    .modal__dialog {
+      max-width: 98%;
+      width: 98%;
+      max-height: 98%;
+    }
+  }
+
+  &.modal_scroll-vert {
+    .modal__content {
+      display: grid;
+      grid-auto-rows: auto 1fr auto;
+      max-height: 100%;
+    }
+
+    .modal__body {
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      scrollbar-color: $scroll-color-thumb $scroll-color-track;
+      scrollbar-width: thin;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: $scroll-color-track;
+      }
+
+      /* ползунок скролл-бара */
+      ::-webkit-scrollbar-thumb {
+        background-color: $scroll-color-thumb;
+        border-radius: 2px;
+        box-shadow: none;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: $scroll-color-thumb;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+.np-step-status {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 16px;
+  background: $c-base-10;
+  border-radius: 4px;
+
+  .np-step-status__label {
+    font-weight: 500;
+  }
+
+  .np-step-status__value {
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 16px;
+
+    &.np-step-status__value_et {
+      color: $c-white;
+      background: $c-base-300;
+    }
+
+    &.np-step-status__value_red {
+      color: $c-white;
+      background: $c-red-700;
+    }
+
+    &.np-step-status__value_green {
+      color: $c-white;
+      background: $c-green-700;
+    }
+
+    &.np-step-status__value_ip2 {
+      color: $c-white;
+      background: $c-green2-600;
+    }
+  }
+}

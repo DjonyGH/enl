@@ -1,0 +1,52 @@
+.calculation-make {
+  display: grid;
+  grid-auto-rows: 1fr auto;
+
+  .calculation-make__block {
+    display: grid;
+    grid-auto-rows: auto 1fr;
+  }
+
+  .calculation-make__block-addinfo {
+    background: $c-white;
+    border-radius: 8px;
+    padding: 16px 24px;
+  }
+
+  .calculation-make__block-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .calculation-make__block-body {
+    background: $c-base-10;
+    border-radius: $corner-radius_2;
+    padding: 32px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-color: $scroll-color-thumb $scroll-color-track;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: $scroll-color-track;
+    }
+
+    /* ползунок скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background-color: $scroll-color-thumb;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: $scroll-color-thumb;
+    }
+  }
+
+  .calculation-make__block-title + .calculation-make__block-body {
+    margin-top: 16px;
+  }
+}

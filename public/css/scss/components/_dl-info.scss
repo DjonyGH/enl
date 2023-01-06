@@ -1,0 +1,44 @@
+.dl-info {
+  display: flex;
+  justify-content: space-between;
+
+  .dl-info__label {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: $c-base-500;
+  }
+
+  .dl-info__label-text {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .dl-info__label-divider {
+    border-bottom: 1px dashed $c-base-400;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+    min-width: 50px;
+  }
+
+  .dl-info__value {
+    flex: 0 0 auto;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  &.dl-info_major {
+    font-size: 16px;
+    line-height: 1.25em;
+
+    .dl-info__label {
+      color: $text-color;
+    }
+  }
+
+}

@@ -1,0 +1,22 @@
+.filters-aside {
+  width: 360px;
+  background: $c-base-10;
+  border-radius: $corner-radius_2;
+  /*overflow: hidden;*/
+
+  .filters-aside__title {
+    background: $c-primary-100;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: $corner-radius_2 $corner-radius_2 0 0;
+  }
+
+  .filters-aside__body {
+    padding: 24px;
+  }
+
+  .form-control_date {
+    margin-right: 8px;
+  }
+}

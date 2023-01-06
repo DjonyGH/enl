@@ -1,0 +1,72 @@
+.dl-options {
+  &:first-child {
+    margin-top: 0 !important;
+  }
+
+  dt {
+    text-transform: uppercase;
+    color: $c-base-500;
+    font-weight: 500;
+  }
+
+  dd {
+    font-weight: 600;
+    margin-top: 4px;
+
+    &.big {
+      font-size: 16px;
+    }
+  }
+
+  .dl-option__notice {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.35em;
+  }
+
+  &.dl-options_itog {
+    dt {
+      text-transform: none;
+      color: $c-base-900;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .dl-option__notice {
+      font-size: 14px;
+      color: $c-base-500;
+      margin-top: 4px;
+    }
+  }
+
+  &.dl-options_makecalc {
+
+    dt {
+      color: $c-base-900;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    .dl-option__notice {
+      font-size: 14px;
+      color: $c-base-500;
+      margin-top: 4px;
+    }
+
+    dd {
+      margin-top: 8px;
+    }
+  }
+
+  &.dl-options_inline {
+    display: flex;
+
+    dd {
+      margin-top: 0;
+      margin-left: 4px;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.badge {
+  padding: 0.4em 0.4em;
+  background: $c-base-100;
+  border-radius: $corner-radius;
+  display: inline-block;
+  font-size: 0.875em;
+  line-height: 0.875em;
+  font-weight: 400;
+
+  &.badge_success {
+    background: $c-green-100;
+    color: $c-green-700;
+  }
+
+  &.badge_alert {
+    background: $c-red-100;
+    color: $c-red-700;
+  }
+}
+

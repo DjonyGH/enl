@@ -1,0 +1,15 @@
+{
+  "fioUser": "Соколова А. В.",
+  "rankUser": "МФ",
+  "nickNameUser": "mf0",
+  "emailUser": "mf0@minfin.gov.ru",
+  "accessToken": "1",
+  "expiresIn": 15000,
+  "refreshToken": "2",
+  "refreshExpiresIn": 15000,
+  "tokenType": "",
+  "sessionState": "",
+  "notBeforePolicy": 0,
+  "scope": "",
+  "roles": []
+}

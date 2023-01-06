@@ -1,0 +1,372 @@
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  outline: none !important;
+}
+
+///Кнопки
+.btn {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  text-align: center;
+  border-radius: $corner-radius;
+  line-height: 38px;
+  height: 40px;
+  padding: 0 12px;
+  font-weight: 400;
+  outline: none !important;
+  text-decoration: none !important;
+  position: relative;
+  @include transition_1;
+  transition-property: background-color, border-color, opacity, color, box-shadow;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.btn_small {
+    font-size: 14px;
+    line-height: 30px;
+    height: 32px;
+  }
+
+  &.btn_large {
+    font-size: 16px;
+    line-height: 54px;
+    height: 56px;
+    padding: 0 32px;
+  }
+
+  &.btn_primary {
+    color: $c-white;
+    background-color: $primarycolor;
+    border-color: $primarycolor;
+    /*box-shadow: 0 5px 20px rgba(0, 87, 255, 0.35);*/
+
+    svg {
+      g {
+        fill: $c-white;
+      }
+    }
+
+    &:hover {
+      background-color: shade($primarycolor, 20%);
+      color: $c-white !important;
+      border-color: shade($primarycolor, 20%);
+      box-shadow: none;
+
+      svg {
+        g {
+          fill: $c-white !important;
+        }
+      }
+    }
+
+    &:active {
+      background-color: shade($primarycolor, 40%);
+      border-color: shade($primarycolor, 40%);
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background-color: $c-primary-300;
+      border-color:$c-primary-300;
+      color: rgba($c-white, 0.6);
+      box-shadow: none;
+    }
+  }
+
+  &.btn_secondary {
+    background-color: $secondarycolor;
+    color: $text-color !important;
+    border-color: $secondarycolor;
+
+    &:hover {
+      background-color: shade($secondarycolor, 3%);
+      border-color: shade($secondarycolor, 3%);
+    }
+
+    &:active {
+      background-color: shade($secondarycolor, 10%);
+      border-color: shade($secondarycolor, 10%);
+    }
+
+    &:disabled {
+      background-color: $c-base-100;
+      border-color: $c-base-100;
+      color: rgba($text-color, 0.6);
+    }
+  }
+
+
+  &.btn_alert {
+    background-color: $c-red-600;
+    color: $c-white;
+    border-color: $c-red-600;
+
+    &:hover {
+      background-color: $c-red-700;
+      color: $c-white;
+      border-color: $c-red-700;
+    }
+
+    &:active {
+      background-color:$c-red-800;
+      border-color: $c-red-800;
+    }
+  }
+
+  &.btn_white {
+    background-color: $c-white;
+    color: $c-base-900;
+    border-color: $c-white;
+
+    &:hover {
+      background-color: shade($c-white, 3%);
+      border-color: shade($c-white, 3%);
+    }
+
+    &:active {
+      background-color: shade($c-white, 10%);
+      border-color: shade($c-white, 10%);
+    }
+
+    &:disabled {
+      background-color: $c-base-100;
+      border-color: $c-base-100;
+      color: rgba($text-color, 0.6);
+    }
+  }
+
+  &.btn_xls {
+    background-color: $c-xls;
+    color: $c-white;
+    border-color: $c-xls;
+
+    &:hover {
+      background-color: $c-xls-hover;
+      color: $c-white;
+      border-color: $c-xls-hover;
+    }
+
+    &:active {
+      background-color:$c-xls-active;
+      border-color: $c-xls-active;
+    }
+  }
+
+  &.btn_light {
+    padding: 0;
+    border: 0;
+    background-color: transparent !important;
+    color: $c-base-900;
+    line-height: 1.3em;
+    height: auto;
+
+    &:hover {
+      color: $c-primary-700;
+    }
+
+    &:active {
+      color: $c-primary-800;
+    }
+
+    &:disabled {
+      color: rgba($c-primary-800, 0.6);
+    }
+  }
+
+  &.btn_outline {
+    background-color: $c-white;
+
+    &.btn_primary{
+      color: $primarycolor;
+      border-color: $primarycolor;
+
+      svg {
+        g {
+          fill: $primarycolor;
+        }
+      }
+    }
+
+    &.btn_secondary {
+      color: $secondarycolor;
+      border-color: $secondarycolor;
+    }
+
+    &.btn_alert {
+      color: $red;
+      border-color: $red;
+    }
+  }
+
+  &.btn_wrap {
+    height: auto;
+    line-height: 1.35em;
+    padding: 0.5em 2em;
+  }
+
+  &.btn_light {
+    background: $c-white;
+  }
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+
+  .btn-icon__icon {
+    display: block;
+    @include fulltextnull;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+
+
+    img, svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      g {
+        fill: $c-base-800;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+      }
+    }
+  }
+
+  &.btn_makecommon {
+    svg {
+      g {
+        fill: $c-base-800;
+      }
+    }
+  }
+
+  &.btn_totrash {
+    svg {
+      g {
+        fill: $c-red-600;
+      }
+    }
+  }
+
+  &:disabled {
+    img {
+      opacity: 0.4;
+    }
+
+    svg {
+      g {
+        fill:  $c-base-300;
+      }
+    }
+  }
+
+  &.btn-icon_nobg {
+    &:disabled {
+      background-color: transparent;
+      border-color: transparent;
+      color: rgba($text-color, 0.6);
+    }
+  }
+}
+
+.btn-ico {
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  outline: none !important;
+  border-radius: $corner-radius;
+  @include transition_1;
+  transition-property: background-color, box-shadow;
+
+  &.btn-ico_24 {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.btn-ico_32 {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.btn-ico_40 {
+    width: 40px;
+    height: 40px;
+  }
+
+  &.btn-ico_48 {
+    width: 48px;
+    height: 48px;
+  }
+
+  &.btn-ico_56 {
+    width: 56px;
+    height: 56px;
+  }
+
+  .btn-ico__ico {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.btn-dataurl {
+    text-indent: -20000px;
+    position: relative;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+  }
+
+  &.btn_white {
+    background-color: $c-white;
+    /*box-shadow: 0 5px 20px rgba(50, 64, 87, 0.15);*/
+
+    &:hover {
+      background-color: $c-base-10;
+    }
+  }
+
+  &.btn_primary {
+    background-color: $primarycolor;
+    /*box-shadow: 0 5px 20px rgba(0, 87, 255, 0.35);*/
+
+    &:hover {
+      background-color: shade($primarycolor, 20%);
+    }
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &.btn-ico_active {
+    background-color: $c-base-800 !important;
+  }
+}
+
+
+
+
+
+

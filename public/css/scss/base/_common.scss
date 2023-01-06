@@ -1,0 +1,121 @@
+body {
+  background-color: $page-bg-color;
+  font-family: $text-font;
+  color: $text-color;
+
+  font-size: $text-size_mobile;
+  line-height: $text-lineheight_mobile;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-weight: $text-width;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $text-size_ipad;
+    line-height: $text-lineheight_ipad;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $text-size_desctop;
+    line-height: $text-lineheight_desctop;
+  }
+
+  @include media-breakpoint-up(h) {
+    font-size: $text-size_hdesctop;
+    line-height: $text-lineheight_hdesctop;
+  }
+
+  @include media-breakpoint-up(xh) {
+    font-size: $text-size_xhdesctop;
+    line-height: $text-lineheight_xhdesctop;
+  }
+
+  @include media-breakpoint-up(sh) {
+    font-size: $text-size_shdesctop;
+    line-height: $text-lineheight_shdesctop;
+  }
+}
+
+body {
+}
+
+
+a {
+  color: $links_color;
+  @include transition_1;
+  transition-property: color;
+  text-decoration: underline;
+
+  &:visited {
+    color: $links_color_visited;
+  }
+
+  &:hover {
+    color: $links_color_hover;
+  }
+
+  &:active {
+    color: $links_color_active;
+  }
+
+  &.noundeline {
+    text-decoration: none;
+  }
+}
+
+
+///Общие классы
+
+figure {
+  @include fulltextnull;
+  margin: 0;
+
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+nav {
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.mobile {
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+}
+
+.ipad {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: inherit;
+  }
+}
+
+.desctop {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: inherit;
+  }
+}
+
+
+hr {
+  border: 0;
+  border-top: 1px solid $c-base-100;
+
+  &.c-base-200 {
+    border-top-color: $c-green2-600;
+  }
+}
+

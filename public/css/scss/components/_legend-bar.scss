@@ -1,0 +1,50 @@
+.legend-bar {
+  .legend-bar__list {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin: -6px 0;
+  }
+
+  .legend-bar__item {
+    display: table-row;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .legend-bar__item-label,
+  .legend-bar__item-value {
+    display: table-cell;
+    padding-bottom: 8px;
+  }
+
+  .legend-bar__item-bar-block {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 2px;
+    border-radius: 4px;
+  }
+
+  .legend-bar__item-bar {
+    position: absolute;
+    height: 100%;
+  }
+
+  .legend-bar__item-label {
+    padding-right: 16px;
+    width: 90%;
+  }
+
+  .legend-bar__item-value {
+    white-space: nowrap;
+    padding-left: 16px;
+    text-align: right;
+  }
+}

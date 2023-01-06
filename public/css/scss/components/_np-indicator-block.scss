@@ -1,0 +1,38 @@
+.np-indicator-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border: 1px solid $c-base-100;
+  border-radius: 4px;
+
+  .np-indicator-block__label,
+  .np-indicator-block__value {
+    padding: 16px 24px;
+  }
+
+  .np-indicator-block__label {
+    width: 65%;
+  }
+
+  .np-indicator-block__value {
+    width: 35%;
+    background: $c-base-10;
+    text-align: right;
+  }
+
+  &.np-indicator-block_special {
+    font-size: 16px;
+    line-height: 1.25em;
+    border: none;
+    background: $c-primary-10;
+
+    .np-indicator-block__label {
+      font-weight: 600;
+    }
+
+    .np-indicator-block__value {
+      font-weight: 600;
+      background: $c-primary-100;
+    }
+  }
+}

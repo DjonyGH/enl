@@ -1,0 +1,202 @@
+{
+  "overallCount": 21,
+  "pageNum": 0,
+  "pageCount": 2,
+  "rows": [
+    {
+      "name": "ПАО \"Сусуманский горно-обогатительный комбинат \"Сусуманзолото\"",
+      "inn": "4905001978",
+      "industry": "07.2",
+      "benefit": [
+        "15010101"
+      ],
+      "mode": [
+        "СЭЗ.Магадан"
+      ],
+      "benefitsSummary": "359153",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"Денежкин камень\"",
+      "inn": "4909909810",
+      "industry": "71.1",
+      "benefitsSummary": "1144",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "Совместное предприятие ЗАО \"Омсукчанская горно-геологическая компания\"",
+      "inn": "4909021566",
+      "industry": "07.2",
+      "benefitsSummary": "50408",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"Электросетьмонтаж\"",
+      "inn": "4909088627",
+      "industry": "43.2",
+      "benefitsSummary": "263",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "ООО \"Омолонская золоторудная компания\"",
+      "inn": "4909109130",
+      "industry": "07.2",
+      "benefitsSummary": "518488",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ПАО \"Магаданский морской торговый порт\"",
+      "inn": "4909047613",
+      "industry": "52.2",
+      "benefitsSummary": "7363",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "АО \"Серебро Магадана\"",
+      "inn": "4900003918",
+      "industry": "07.2",
+      "benefitsSummary": "1019515,29",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ОАО \"Горно - добывающая компания \"Берелех\"",
+      "inn": "4905006253",
+      "industry": "07.2",
+      "benefitsSummary": "177542",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"Хлебокомбинат \"Магаданский\"",
+      "inn": "4909909584",
+      "industry": "10.7",
+      "benefitsSummary": "458",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "ЗАО \"Колымавзрывпром\"",
+      "inn": "4907006146",
+      "industry": "20.5",
+      "benefitsSummary": "8665",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "АО \"Магаданский механический завод\"",
+      "inn": "4909001369",
+      "industry": "28.9",
+      "benefitsSummary": "3661",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "ОАО \"Колымацемент\"",
+      "inn": "4909044644",
+      "industry": "23.5",
+      "benefitsSummary": "261",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "АО \"Магаданэлектросеть\"",
+      "inn": "4909044901",
+      "industry": "35.1",
+      "benefitsSummary": "853",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "ООО \"АГАТ\"",
+      "inn": "4907005752",
+      "industry": "07.2",
+      "benefitsSummary": "13817",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "Публичное АО \"Колымаэнерго\"",
+      "inn": "4908000718",
+      "industry": "35.1",
+      "benefitsSummary": "6019",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "ООО \"Колыманефтепродукт\"",
+      "inn": "4900004453",
+      "industry": "46.7",
+      "benefitsSummary": "54725",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "0"
+    },
+    {
+      "name": "АО \"Золоторудная Компания ПАВЛИК\"",
+      "inn": "4900000681",
+      "industry": "07.2",
+      "benefitsSummary": "388184",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"Оротуканская Россыпная Компания\"",
+      "inn": "4909123494",
+      "industry": "07.2",
+      "benefitsSummary": "16812",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "15010101",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"Артель старателей \"Энергия\"",
+      "inn": "4906000335",
+      "industry": "07.2",
+      "benefitsSummary": "33965",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"Конго\"",
+      "inn": "4907017620",
+      "industry": "07.2",
+      "benefitsSummary": "117681",
+      "rateNnpSubjectRfBudget": "0",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "15050101"
+    },
+    {
+      "name": "ООО \"ПАЛАТКИНСКАЯ ДОРОЖНАЯ КОМПАНИЯ\" ",
+      "inn": "4907003339",
+      "industry": "52.2",
+      "benefitsSummary": "0",
+      "rateNnpSubjectRfBudget": "15010202",
+      "rateNnpFedBudget": "0",
+      "rateNdpi": "0"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.logo-sys {
+  display: flex;
+  align-items: center;
+
+  .logo-sys__img {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .logo-sys__title {
+   color: $c-white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo-sys__name {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 24px;
+  }
+
+  .logo-sys__notice {
+    font-size: 12px;
+    line-height: 16px;
+    color: $c-base-200;
+  }
+}
