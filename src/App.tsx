@@ -1,41 +1,37 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
-import { tool } from "utils/tools";
+// import { tool } from "utils/tools";
 import "@ff/ui-kit/lib/styles/fns.theme.css";
 import PrivateRoute from "components/PrivateRoute";
-import PreloaderSuspense from "components/PreloaderSuspense/PreloaderSuspense";
+import Preloader from "components/Preloader";
+import { PrivateRoutes } from "routes";
+import { TPrivateRouteValue } from "types/routes.types.ts";
 
-const NotFound = React.lazy(() => import("components/routes/NotFound"));
-const Proto = React.lazy(() => import("components/routes/Proto"));
-const PdfReport = React.lazy(() => import("components/routes/PdfReport"));
-const Login = React.lazy(() => import("components/routes/Login"));
+const NotFound = React.lazy(() => import("pages/NotFound"));
+const Login = React.lazy(() => import("pages/Login"));
 
 const App: React.FC = () => {
-  tool.bodyClassDisable();
+  // tool.bodyClassDisable();
 
   return (
-    <PreloaderSuspense>
+    <Suspense fallback={<Preloader />}>
       <Switch>
-        <PrivateRoute exact path="/p:part" component={Proto} />
-        <PrivateRoute exact path="/p:part/:guid" component={Proto} />
-        <PrivateRoute
-          exact
-          path="/p:part/:guid/report/:subpart"
-          component={Proto}
-        />
-        <PrivateRoute
-          exact
-          path="/p:part/:inn/info/:subpart"
-          component={Proto}
-        />
-        <PrivateRoute exact path="/p:part/:guid/:stage" component={Proto} />
-        <PrivateRoute exact path="/report/:guid" component={PdfReport} />
         <Route exact path="/login" component={Login} />
-        <PrivateRoute exact path="/:mode" component={Proto} />
-        <PrivateRoute exact path="/" component={Proto} />
+
+        {(Object.values(PrivateRoutes) as TPrivateRouteValue[]).map(
+          (privateRoute) => (
+            <PrivateRoute
+              key={privateRoute.path}
+              exact
+              path={privateRoute.path}
+              component={privateRoute.component}
+            />
+          )
+        )}
+
         <Route path="*" component={NotFound} />
       </Switch>
-    </PreloaderSuspense>
+    </Suspense>
   );
 };
 

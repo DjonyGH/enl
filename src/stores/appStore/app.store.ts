@@ -1,13 +1,15 @@
 import { action, makeObservable, observable } from "mobx";
-import _ from "lodash";
 import { appConfig } from "configs/app.config";
+import { EAppMode } from "types/common.types";
 
 class AppStore {
   version = appConfig.version;
 
   isPrototype = appConfig.isDefaultMock;
 
-  appMode: string | undefined = undefined;
+  appMode: EAppMode | undefined = undefined;
+
+  isTableMaximized = false;
 
   isMenuCollapsed = true;
 
@@ -30,17 +32,22 @@ class AppStore {
     makeObservable(this, {
       version: observable,
       appMode: observable,
+      isTableMaximized: observable,
       isMenuCollapsed: observable,
       setAppMode: action,
+      toggleIsTableMaximized: action,
       toggleIsMenuCollapsed: action,
     });
   }
 
-  setAppMode(mode: string) {
+  setAppMode(mode: EAppMode) {
     sessionStorage.setItem("mode", mode);
-    if (this.appMode !== mode) {
-      this.appMode = mode;
-    }
+    if (this.appMode === mode) return;
+    this.appMode = mode;
+  }
+
+  toggleIsTableMaximized() {
+    this.isTableMaximized = !this.isTableMaximized;
   }
 
   toggleIsMenuCollapsed() {

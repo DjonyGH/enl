@@ -1,6 +1,6 @@
 import { RouteProps } from "react-router-dom";
 
-type TPrivateRouteValue = {
+export type TPrivateRouteValue = {
   exact?: boolean;
   path: string;
   component: React.ComponentType<RouteProps>;
