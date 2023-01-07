@@ -27,3 +27,14 @@ export enum ESortValue {
   uploadedAt = "Дате и времени",
   uploadedBy = "Кто загрузил",
 }
+
+export enum EModalMode {
+  uploading = 0,
+  reloading = 1,
+}
+
+export enum EModalState {
+  editing = 0,
+  success = 1,
+  error = 2,
+}

@@ -1,0 +1,61 @@
+.uploadedReportCard {
+  border: 1px solid hsl(220deg, 6%, 80%);
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 8px;
+  overflow: hidden;
+  padding-left: 24px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.uploadedReportCard:first-child {
+  margin-top: 0;
+}
+.uploadedReportCard .left {
+  display: flex;
+  width: 100%;
+}
+.uploadedReportCard .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 394px;
+}
+.uploadedReportCard .item {
+  display: inline;
+  color: hsl(220deg, 6%, 50%);
+}
+.uploadedReportCard .with_dot:after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: hsl(220deg, 100%, 50%);
+  margin-left: 16px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+.uploadedReportCard .value {
+  font-weight: 700;
+  color: #18191B;
+}
+.uploadedReportCard .noRelevant {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 224px;
+}
+.uploadedReportCard .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 224px;
+}
+.uploadedReportCard .approved {
+  display: inline;
+}
+
+/*# sourceMappingURL=UploadedReportCardItem.module.css.map */

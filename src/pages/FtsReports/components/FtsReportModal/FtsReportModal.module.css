@@ -1,0 +1,57 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  width: 592px;
+  height: 100%;
+}
+.modalContent .modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 28px;
+}
+.modalContent .modalBody .fileUploader {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.modalContent .modalBody .fileUploader > div {
+  width: 100%;
+}
+.modalContent .modalBody .fileUploader .fileName input {
+  font-size: 16px;
+  margin-right: 150px;
+}
+.modalContent .modalBody .fileUploader .uploadBtn {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 128px;
+}
+.modalContent .modalBody .reportYearChooser {
+  width: 140px;
+}
+.modalContent .modalBody .success {
+  color: hsl(130deg, 50%, 40%);
+}
+.modalContent .modalBody .error {
+  color: hsl(0deg, 100%, 50%);
+}
+.modalContent .modalControls {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -24px;
+  border-top: 1px solid hsl(220deg, 6%, 90%);
+  padding: 16px 24px 0;
+}
+.modalContent .modalControls .leftPart {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.loader {
+  width: 100%;
+}
+
+/*# sourceMappingURL=UploadedReportModal.module.css.map */

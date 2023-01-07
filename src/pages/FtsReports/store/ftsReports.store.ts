@@ -34,11 +34,12 @@ class FtsReportsStore {
       sortValue: observable,
       availableYears: observable,
       filteredFtsReportList: computed,
-      loadFtsReportList: action,
-      loadUploadingReportFile: action,
-      createUploadingReport: action,
-      reloadUploadingReportFile: action,
-      approveUploadingReport: action,
+      paginatedFtsReportList: computed,
+      overallCount: computed,
+      loadData: action,
+      createFtsReport: action,
+      reloadFtsReportFile: action,
+      approveFtsReport: action,
       setData: action,
       setPageNum: action,
       setRowsPerPage: action,
@@ -66,6 +67,15 @@ class FtsReportsStore {
         }
         return 0;
       });
+      return rows;
+    }
+    return [];
+  }
+
+  get paginatedFtsReportList(): IFtsReport[] {
+    if (this.filteredFtsReportList.length) {
+      let rows = this.filteredFtsReportList;
+      const overallCount = this.filteredFtsReportList.length;
 
       if (this.rowsPerPage < overallCount) {
         return rows.slice(
@@ -78,7 +88,11 @@ class FtsReportsStore {
     return [];
   }
 
-  async loadFtsReportList(): Promise<boolean> {
+  get overallCount() {
+    return this.filteredFtsReportList.length;
+  }
+
+  async loadData(): Promise<boolean> {
     const ss =
       !appStore.isPrototype && appStore.featureFlags.ftsReports
         ? service
@@ -106,7 +120,7 @@ class FtsReportsStore {
     }
   }
 
-  async createUploadingReport(newReport: INewFtsReport): Promise<boolean> {
+  async createFtsReport(newReport: INewFtsReport): Promise<boolean> {
     try {
       const ss =
         !appStore.isPrototype && appStore.featureFlags.ftsReports
@@ -124,7 +138,7 @@ class FtsReportsStore {
     }
   }
 
-  async reloadUploadingReportFile(
+  async reloadFtsReportFile(
     file: ResultFileType,
     reportId: number
   ): Promise<boolean> {
@@ -147,7 +161,7 @@ class FtsReportsStore {
     }
   }
 
-  async approveUploadingReport(report: IFtsReport): Promise<boolean> {
+  async approveFtsReport(report: IFtsReport): Promise<boolean> {
     try {
       const ss =
         !appStore.isPrototype && appStore.featureFlags.ftsReports

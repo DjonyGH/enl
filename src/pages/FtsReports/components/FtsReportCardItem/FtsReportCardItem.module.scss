@@ -1,0 +1,73 @@
+@import "../../../../../public/css/scss/utils/variables";
+@import "../../../../../public/css/scss/themes/theme-light";
+
+.uploadedReportCard {
+  border: 1px solid $c-base-200;
+  background: $c-white;
+  border-radius: $corner-radius_2;
+  margin-top: 8px;
+  overflow: hidden;
+  padding-left: 24px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .left {
+    display: flex;
+    width: 100%;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 394px;
+  }
+
+  .item {
+    display: inline;
+    color: $c-base-500;
+  }
+
+  .with_dot {
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $c-primary-600;
+      margin-left: 16px;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+  }
+
+  .value {
+    font-weight: 700;
+    color: #18191B;
+  }
+
+  .noRelevant {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 224px;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 224px;
+  }
+
+  .approved {
+    display: inline;
+  }
+}

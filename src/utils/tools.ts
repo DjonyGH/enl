@@ -1,5 +1,6 @@
 import { appConfig } from "configs/app.config";
 import { map } from "lodash";
+import { DateTime } from "luxon";
 import * as XLSX from "sheetjs-style";
 import { TCodeTitlePair } from "types/common.types";
 
@@ -18,6 +19,10 @@ export const tools = {
 
   isEkp(): boolean {
     return "CefSharp" in window;
+  },
+
+  dateToString2(date: Date): string {
+    return DateTime.fromJSDate(date).toFormat("dd.MM.yyyy, HH:mm");
   },
 
   exportXLSFile<T extends { [key in keyof T]: unknown }>(

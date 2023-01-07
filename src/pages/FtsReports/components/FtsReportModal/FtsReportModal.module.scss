@@ -1,0 +1,72 @@
+@import "../../../../../public/css/scss/utils/variables";
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  width: 592px;
+  height: 100%;
+
+  .modalBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 28px;
+
+    .fileUploader {
+      display: flex;
+      width: 100%;
+      position: relative;
+
+      > div {
+        width: 100%;
+      }
+
+      .fileName{
+        input {
+          font-size: 16px;
+          margin-right: 150px;
+        }
+      }
+
+      .uploadBtn {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        width: 128px;
+      }
+    }
+
+    .reportYearChooser {
+      width: 140px;
+    }
+
+    .success {
+      color: $c-green-700;
+    }
+
+    .error {
+      color: $c-red-600;
+    }
+  }
+
+  .modalControls {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -24px;
+    border-top: 1px solid $c-base-100;
+    padding: 16px 24px 0;
+
+    .leftPart {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+}
+
+.loader {
+  width: 100%;
+  //div:last-child {
+  //  width: 100%;
+  //}
+}
